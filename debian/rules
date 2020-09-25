@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+DEB_BUILD_OPTIONS += nocheck
+
 export GEM2DEB_TEST_RUNNER = --check-dependencies
 
 %:
