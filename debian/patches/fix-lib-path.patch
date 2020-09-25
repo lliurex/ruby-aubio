@@ -1,0 +1,27 @@
+Description: Fix the path to match the location of libaubio.so.5
+Author: Valentin Vidic <vvidic@debian.org>
+Last-Update: 2020-06-28
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/lib/aubio/aubio-ffi.rb
++++ b/lib/aubio/aubio-ffi.rb
+@@ -6,7 +6,7 @@
+ 
+ module Aubio::Api
+   extend FFI::Library
+-  lib_paths = Array(ENV['AUBIO_LIB'] || Dir['/{opt,usr}/{,local/}{lib,lib64,Cellar/aubio**,lib/arm-linux-gnueabihf}/libaubio.{*.dylib,so.*}'])
++  lib_paths = Array(ENV['AUBIO_LIB'] || Dir['/{opt,usr}/{,local/}{lib,lib64,Cellar/aubio**,lib/*}/libaubio.{*.dylib,so.*}'])
+   fallback_names = %w[libaubio.4.2.2.dylib libaubio.so.1 aubio1.dll libaubio-5.dll]
+   ffi_lib(lib_paths + fallback_names)
+ 
+--- a/lib/aubio/legacy_api.rb
++++ b/lib/aubio/legacy_api.rb
+@@ -6,7 +6,7 @@
+   module LegacyApi #:nodoc
+     extend FFI::Library
+     # idea inspired by https://github.com/qoobaa/magic/blob/master/lib/magic/api.rb
+-    lib_paths = Array(ENV['AUBIO_LIB'] || Dir['/{opt,usr}/{,local/}{lib,lib64,Cellar/aubio**,lib/arm-linux-gnueabihf}/libaubio.{*.dylib,so.*}'])
++    lib_paths = Array(ENV['AUBIO_LIB'] || Dir['/{opt,usr}/{,local/}{lib,lib64,Cellar/aubio**,lib/*}/libaubio.{*.dylib,so.*}'])
+     fallback_names = %w[libaubio.4.2.2.dylib libaubio.so.1 aubio1.dll]
+     ffi_lib(lib_paths + fallback_names)
+ 

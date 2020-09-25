@@ -1,0 +1,30 @@
+Source: ruby-aubio
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Valentin Vidic <vvidic@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb,
+               libaubio5,
+               ruby-ffi (>= 1.9)
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-ruby
+Homepage: https://github.com/xavriley/ruby-aubio
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-aubio.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-aubio
+XS-Ruby-Versions: all
+
+Package: ruby-aubio
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-ffi (>= 1.9),
+         libaubio5,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Ruby bindings for the aubio audio library
+ Aubio is a tool designed for the extraction of annotations from audio signals.
+ Its features include segmenting a sound file before each of its attacks,
+ performing pitch detection, tapping the beat and producing midi streams from
+ live audio.

@@ -1,0 +1,50 @@
+ruby-aubio (0.3.6-2) bionic; urgency=medium
+
+  * Port to bionic from debian
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Fri, 25 Sep 2020 10:42:35 +0200
+
+ruby-aubio (0.3.6-2) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * [ci skip] Update team name
+  * [ci skip] Add .gitattributes to keep unwanted files out of the source package
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+ -- Valentin Vidic <vvidic@debian.org>  Mon, 21 Sep 2020 23:18:31 +0200
+
+ruby-aubio (0.3.6-1) unstable; urgency=medium
+
+  * New upstream version 0.3.6
+
+ -- Valentin Vidic <vvidic@debian.org>  Mon, 21 Sep 2020 22:40:16 +0200
+
+ruby-aubio (0.3.5-1) unstable; urgency=medium
+
+  * New upstream version 0.3.5
+  * Refresh patches for new version
+
+ -- Valentin Vidic <vvidic@debian.org>  Wed, 26 Aug 2020 21:51:46 +0200
+
+ruby-aubio (0.3.4-2) unstable; urgency=medium
+
+  * Enable Salsa CI
+  * Fix failing unit tests for arm64
+
+ -- Valentin Vidic <vvidic@debian.org>  Tue, 25 Aug 2020 22:30:14 +0200
+
+ruby-aubio (0.3.4-1) unstable; urgency=medium
+
+  * New upstream version 0.3.4
+  * Refresh patches for new version
+  * Use github for new releases
+
+ -- Valentin Vidic <vvidic@debian.org>  Sat, 22 Aug 2020 18:50:30 +0200
+
+ruby-aubio (0.3.3-1) unstable; urgency=medium
+
+  * Initial release (Closes: #963906)
+
+ -- Valentin Vidic <vvidic@debian.org>  Fri, 26 Jun 2020 21:35:46 +0200
