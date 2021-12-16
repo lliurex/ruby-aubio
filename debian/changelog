@@ -1,3 +1,9 @@
+ruby-aubio (0.3.6-2) focal; urgency=medium
+
+  * Focal port
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Thu, 16 Dec 2021 11:40:05 +0100
+
 ruby-aubio (0.3.6-2) bionic; urgency=medium
 
   * Port to bionic from debian
